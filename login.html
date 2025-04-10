@@ -56,7 +56,22 @@
     }
     function goToLogin() {
         window.location.href = "login.html";
-        }      
+    }      
+    function handleLogin(){
+      const username = document.getElementById("userName").value.trim();
+      const email = document.getElementById("userEmail").value.trim();
+
+      if (!username || !email) {
+        alert("Please fill in both name and email.");
+        return;
+      }
+
+      localStorage.setItem('userName', username);
+      localStorage.setItem('email', email);
+
+      window.location.href = "bot.html";
+    }
+
 </script>
 </body>
 </html>
