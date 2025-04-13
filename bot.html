@@ -61,7 +61,6 @@
     window.GoogleGenerativeAI = GoogleGenerativeAI;
   </script>
 
-  <!-- Main Script (non-module so it can access imported SDK) -->
   <script>
     let username;
     let email;
@@ -103,7 +102,6 @@
         return;
       }
 
-      // Display and store the question
       localStorage.setItem("question", question);
       const displayedQuestion = document.getElementById("displayedQuestion");
       if (displayedQuestion) displayedQuestion.innerText = question;
